@@ -11,7 +11,11 @@ module.exports = {
     rules: [
       {
         test: /\.scss$/i,
-        use: ["style-loader", "css-loader", "sass-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          "sass-loader"
+        ],
       },
       {
         test: /\.m?js$/,
@@ -28,6 +32,9 @@ module.exports = {
   devServer: {
     port: 4444,
     open: true,
+    liveReload: false,
   },
-  plugins: [new HtmlWebpackPlugin({template: 'src/index.html'})],
+  plugins: [
+    new HtmlWebpackPlugin({ template: 'src/index.html' }),
+  ],
 };
